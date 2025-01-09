@@ -1,0 +1,24 @@
+<%-include("partails/header.ejs")  %>
+
+<div class="mx-5">
+
+
+    <h2>Home</h1>
+    <%= homeContent %>
+        <br>
+    
+        <% posts.forEach((post)=>{ %>
+            <br>
+            <h3><%= post.title %></h1>
+            <% if((post.content).length > 100) { %>
+                <p><%= post.content.substring(0,97) + '...' ; %> <a href="/posts/<%=post.title%>">Read more</a></p>
+            <% } else { %>
+                <%= post.content %>
+            <% } %>
+        <% }) %>
+    
+        
+
+</div>
+
+<%-include("partails/footer.ejs")  %>

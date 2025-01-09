@@ -1,0 +1,21 @@
+<%-include("partails/header.ejs")  %>
+
+
+<div class="mx-5">
+    <h1>Compose</h1>
+    <form action="/compose" method="post">
+      <div class="my-3 ">
+        <label for="title" class="form-label "><h4>Title</h1></label>
+        <input name="postTitle" type="text" class="form-control border-dark-subtle" id="title" style="height: 50px" maxlength="150">
+      </div>
+      <div class="mb-3">
+        <label for="content" class="form-label"><h4>Post</h3></label>
+        <textarea name="postBody" class="form-control border-dark-subtle" rows="10" ></textarea>
+      </div>
+      
+      <button type="submit" class="btn btn-dark">Create</button>
+    </form>
+</div>
+
+
+<%-include("partails/footer.ejs")  %>
